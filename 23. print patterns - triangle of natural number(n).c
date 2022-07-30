@@ -1,3 +1,4 @@
+// prints triangles of natural numbers..
 #include <stdio.h>
 int main(){
 int n, i, j ;
