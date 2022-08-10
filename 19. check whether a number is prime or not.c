@@ -18,8 +18,8 @@ for (i=2; i<=n/2; ++i)
 }
 //according to flag value, show output..
 if (flag == 0)
-    printf("%d is a prime number,", n);
+    printf("%d is a prime number.", n);
 else
-    printf("%d is not a prime number,", n);
+    printf("%d is not a prime number.", n);
 }
 
