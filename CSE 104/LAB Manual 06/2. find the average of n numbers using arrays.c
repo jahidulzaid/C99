@@ -11,14 +11,14 @@ void average(){
     printf("Enter number of Element : ");
     
     //read value of each element and store it in arry
-    int Arr[scanf("%d", &n)];
+    float Arr[scanf("%d", &n)];
     float sum=0, average=0;
     for(int i = 0; i<= n-1; i++){
         printf("Enter %d number : ", i);
-        scanf("%d", &Arr[i]);
+        scanf("%f", &Arr[i]);
         sum +=Arr[i];
     }
     average=sum/n;
-    printf("The Average is %.2f", average);
+    printf("The Average is %.2f\n", average);
     
 }
