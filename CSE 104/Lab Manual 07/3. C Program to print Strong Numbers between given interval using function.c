@@ -1,5 +1,6 @@
 #include <stdio.h>
 void strong_number(int n1, int n2);
+long long fact(int temp);
 
 int main(){
     int n1, n2;
@@ -11,16 +12,30 @@ int main(){
     return 0;
 }
 void strong_number(int n1, int n2){
-    int i, j, sum = 0, temp;
-    for(i = n1; i <= n2; i++){
-        temp = i;
+    int i, j, temp, sum;
+    //iterates from n1 to n2
+    while(n1 !=n2){
+        sum = 0;
+        temp = n1;
+        //calculates sum of factorial of digits of n1
         while(temp != 0){
-            sum += temp % 10;
+            sum += fact(temp % 10);
             temp /= 10;
         }
-        if(i == sum){
-            printf("%d ", i);
+        if (n1 == sum){
+            printf("%d, ", n1);
         }
-        sum = 0;
+
+        n1++;
+       
+
     }
+}
+//recursive function to find factorial of a number
+long long fact(int temp)
+{
+    if(temp == 0)
+        return 1;
+    else
+        return (temp * fact(temp-1));
 }
