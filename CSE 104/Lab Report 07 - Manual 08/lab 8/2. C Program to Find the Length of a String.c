@@ -1,5 +1,5 @@
 #include <stdio.h>
-void stringLength(char str);
+
 
 int main(){
     char str[100];
@@ -8,8 +8,8 @@ int main(){
     stringLength(str);
     return 0;
 }
-void stringLength(char str){
+void stringLength(char str[]){
     int i;
-    for (i=0; str[i]!='\0';i++){
-    }
+    for (i=0; str[i]!='\0';i++);
+    printf("Length of the array is: %d", i);
 }
