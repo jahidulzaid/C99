@@ -1,11 +1,14 @@
 #include <stdio.h>
 int main(){
     int i;
-    char str[1000] = "Hello world!";
-    int size = sizeof(str)/sizeof(str[0]);
+    char str1[100], str2[100];
 
-    for (i = 0; i< size; i++){
-        printf("%c ", str[i]);
+    printf("Enter string str1: ");
+    fgets(str1, sizeof(str1), stdin);
+
+    for (i = 0; str1[i]!= '\0'; ++i){
+        str2[i] = str1[i];
     }
-    printf("%d", size);
+    str2[i] = '\0';
+    puts(str2);
 }
