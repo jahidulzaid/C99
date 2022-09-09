@@ -42,9 +42,9 @@ int main()
                     break;
                 default:
                     if (i % 2 == 0) {
-                        printf("even");
+                        printf("even\n");
                     } else {
-                        printf("odd");
+                        printf("odd\n");
                     }
                     break;
             }
