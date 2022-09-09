@@ -1,11 +1,17 @@
-char str[1000];
-    int start = 0, end = 0;
-    printf("Enter a string to reverse word by word: ");
-    fgets(str, sizeof(str), stdin);
-    while(str[end]){
-        for (end = start;str[end]&&str[end]!=' '; end++);
-        stringReverseWordByWord(str, start, end-1);
-        start = end+1;
+#include <stdio.h>
+
+int length(char str[]) {
+    if (str[0] == '\0') {
+        return 0;
     }
-        printf("%s ", str);
+    return 1 + length(str + 1);
+}
+
+int main(){
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%[^\n]s", str);
+
+    printf("Length of the string is %d\n", length(str));
     return 0;
+}
