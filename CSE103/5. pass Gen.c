@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
 int digitCount(int n){
     if(n==0){
         return 0;
     }
     return 1 + digitCount(n/10);
 }
-
 int Input_Number(){
     int n;
     printf("Enter a 5 digits number: ");
@@ -68,8 +65,17 @@ int password_generator(char str[], int start){
     }
 }
 int main(){
-    char str[10];
-    Input_Number();
-    printf("The password is: ");
-    return 0;
+    int recived,temp;
+    int i;
+    int star[5];
+    char* en[5];
+    recived=INPUT_NUMMBER();
+    for(i=0;i<5;i++){
+        temp=recived;
+        recived=temp%10;
+        star[i]=recived;
+        password_generator(star[i]);
+        temp=temp/10;
+        recived=a;
+    }
 }
