@@ -3,18 +3,18 @@
 
 int main(){
 
-    int input, *arr, i, sum = 0;
+    int input, *arr, i;
     scanf("%d", &input);
     arr = (int*) malloc(input * sizeof(int));
     //read
     for (i= 0; i<input; i++){
         scanf("%d", arr+i);
     }
-    //summing and printing
-    for (i=0; i < input; i++){
-        sum+= *(arr+i);
+    //summing anf printing
+    for (i=input; i > 0; i--){
+        printf("%d ", arr[i-1]);
     }
-    printf("%d\n", sum);
+    
     free(arr);
     return 0;
 
