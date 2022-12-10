@@ -16,7 +16,7 @@ int isCapsLock(void)
 
 void log(char s1[])
 {
-    FILE* file = fopen(getFileName(), "a+");
+    FILE* file = fopen("test.txt", "a+");
     int i = 0;
     fputs(s1, file);
     i++;
