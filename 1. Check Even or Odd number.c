@@ -8,4 +8,5 @@ int main(){
     else
         printf("\nThe number is Odd.");
     return 0;
+    
     }
