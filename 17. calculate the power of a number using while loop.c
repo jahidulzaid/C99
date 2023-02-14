@@ -11,5 +11,4 @@ while(pow != 0){
     --pow;
 }
 printf("%d", result);
-
 }
